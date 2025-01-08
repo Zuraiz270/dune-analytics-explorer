@@ -23,5 +23,5 @@ The Dune Query Executor is a Python application that interacts with the Dune Ana
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/dune-query-executor.git
+   git clone https://github.com/Zuraiz270/dune-query-executor.git
    cd dune-query-executor
