@@ -53,7 +53,8 @@ def save_data_as_parquet(data, output_dir, symbol, period):
 st.title("Dune Analytics Query Executor")
 
 # User inputs
-symbol = st.text_input("Enter Symbol", "USDC")
+st.write("Examples of symbols you can use: `USDC`, `ETH`, `BTC`, `DAI`, `USDT`")
+symbol = st.text_input("Enter Symbol", "")
 period = st.selectbox("Select Period", ["day", "week", "month", "year"])
 if st.button("Execute Query"):
     try:
