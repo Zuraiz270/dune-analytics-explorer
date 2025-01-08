@@ -1,10 +1,11 @@
+
 # Dune Query Executor
 
 ## Overview
 
 The Dune Query Executor is a Python application that interacts with the Dune Analytics API to execute SQL queries, check their status, and retrieve results. The application is designed to facilitate data extraction and processing from Dune Analytics, allowing users to save the results in Parquet format.
 
-Additionally, a **Streamlit-based web application** has been implemented and deployed to provide a user-friendly interface for executing queries and downloading results.
+Additionally, a **Streamlit-based web application** has been implemented and deployed to provide a user-friendly interface for executing queries, visualizing data as tables and graphs, and downloading results.
 
 ## Features
 
@@ -15,6 +16,8 @@ Additionally, a **Streamlit-based web application** has been implemented and dep
 - **Streamlit Web App**:
   - User-friendly interface for entering query parameters (`symbol`, `period`).
   - Real-time updates on query execution status.
+  - Display query results as an interactive table.
+  - Visualize `volume_usd` and `fees_usd` with bar and line charts.
   - Downloadable Parquet file with query results.
   - Deployed for easy access without requiring a local setup.
 
@@ -72,17 +75,25 @@ Additionally, a **Streamlit-based web application** has been implemented and dep
 
 2. Open the app in your browser (usually at `http://localhost:8501`).
 3. Enter the `symbol` and `period` parameters, execute the query, and download the results as a Parquet file.
+4. View the query results as a table.
+5. Explore the visualizations:
+   - **Bar Chart** for `volume_usd` over the selected period.
+   - **Line Chart** for `fees_usd` over the selected period.
 
 ### Deployed Web App
 
 The Streamlit web app has been deployed and is accessible online. You can use it directly to execute Dune queries and download the results.
 
-**Deployed App URL**:
+**Deployed App URL**: https://dune-query-executor.streamlit.app/
 
 ## Features of the Web App
 
 - **User-Friendly Interface**: Easily input parameters and execute queries.
 - **Real-Time Feedback**: Get live updates on query execution status.
+- **Data Visualizations**:
+  - View query results as an interactive table.
+  - Explore `volume_usd` using a bar chart.
+  - Explore `fees_usd` using a line chart.
 - **File Downloads**: Download query results directly in Parquet format.
 
 ## Example Workflow
@@ -90,7 +101,8 @@ The Streamlit web app has been deployed and is accessible online. You can use it
 1. Enter the desired `symbol` (e.g., BTC, ETH) and `period` (e.g., day, week, month, year) in the Streamlit app or directly in the script.
 2. Execute the query.
 3. Wait for the query status to update to "Completed."
-4. Download the Parquet file containing the query results.
+4. View the query results in a table and explore the graphs.
+5. Download the Parquet file containing the query results.
 
 ## Contributing
 
