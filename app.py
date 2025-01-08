@@ -77,6 +77,21 @@ if st.button("Execute Query"):
                     file_path = save_data_as_parquet(rows, output_dir, symbol, period)
                     st.success(f"File saved: {file_path}")
                     
+                    # Convert rows to a DataFrame for visualization
+                    df = pd.DataFrame(rows)
+
+                    # Display the data in a table
+                    st.write("### Query Results")
+                    st.dataframe(df)
+
+                    # Bar chart for volume_usd
+                    st.write("### Volume by Period")
+                    st.bar_chart(df.set_index("period")["volume_usd"])
+
+                    # Line chart for fees_usd
+                    st.write("### Fees Collected by Period")
+                    st.line_chart(df.set_index("period")["fees_usd"])
+
                     # Provide download link
                     with open(file_path, "rb") as file:
                         st.download_button(
