@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Dune Query Executor is a Python application that interacts with the Dune Analytics API to execute SQL queries, check their status, and retrieve results. The application is designed to facilitate data extraction and processing from Dune Analytics, allowing users to save the results in Parquet format.
+The Dune Query Executor is a Python application that interacts with the Dune Analytics API to execute SQL queries, check their status, and retrieve crypto transactional data. The application is designed to facilitate data extraction and processing from Dune Analytics, allowing users to save the results in Parquet format.
 
 Additionally, a **Streamlit-based web application** has been implemented and deployed to provide a user-friendly interface for executing queries, visualizing data as tables and graphs, and downloading results.
 
